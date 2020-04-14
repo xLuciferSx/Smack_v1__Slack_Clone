@@ -10,6 +10,8 @@
 		1F6577C424460A3300035B2C /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6577C324460A3300035B2C /* ChatVC.swift */; };
 		1F6577C624460A5100035B2C /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6577C524460A5100035B2C /* ChannelVC.swift */; };
 		1F6577C824460FE800035B2C /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6577C724460FE800035B2C /* GradientView.swift */; };
+		1F75C72024462060009B830F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F75C71F24462060009B830F /* Constants.swift */; };
+		1F75C72224462658009B830F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F75C72124462658009B830F /* LoginVC.swift */; };
 		1FF16C2A2445D390006548CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF16C292445D390006548CA /* AppDelegate.swift */; };
 		1FF16C2C2445D390006548CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF16C2B2445D390006548CA /* SceneDelegate.swift */; };
 		1FF16C312445D390006548CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF16C2F2445D390006548CA /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 		1F6577C324460A3300035B2C /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		1F6577C524460A5100035B2C /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
 		1F6577C724460FE800035B2C /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		1F75C71F24462060009B830F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1F75C72124462658009B830F /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		1FF16C262445D390006548CA /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FF16C292445D390006548CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FF16C2B2445D390006548CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +54,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F75C71E2446203D009B830F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1F75C71F24462060009B830F /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		1FF16C1D2445D390006548CA = {
 			isa = PBXGroup;
 			children = (
@@ -71,13 +83,13 @@
 		1FF16C282445D390006548CA /* Smack */ = {
 			isa = PBXGroup;
 			children = (
+				1F75C71E2446203D009B830F /* Utilities */,
 				1FFA808D2445DB4A00DA221B /* Helpers */,
 				1FFA808C2445DB4500DA221B /* Model */,
 				1FFA808A2445DB3A00DA221B /* View */,
 				1FFA80892445DB3300DA221B /* Controller */,
 				1FF16C292445D390006548CA /* AppDelegate.swift */,
 				1FF16C2B2445D390006548CA /* SceneDelegate.swift */,
-				1FF16C2F2445D390006548CA /* Main.storyboard */,
 				1FF16C322445D391006548CA /* Assets.xcassets */,
 				1FF16C342445D392006548CA /* LaunchScreen.storyboard */,
 				1FF16C372445D392006548CA /* Info.plist */,
@@ -90,6 +102,7 @@
 			children = (
 				1F6577C324460A3300035B2C /* ChatVC.swift */,
 				1F6577C524460A5100035B2C /* ChannelVC.swift */,
+				1F75C72124462658009B830F /* LoginVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -97,6 +110,7 @@
 		1FFA808A2445DB3A00DA221B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1FF16C2F2445D390006548CA /* Main.storyboard */,
 				1F6577C724460FE800035B2C /* GradientView.swift */,
 			);
 			path = View;
@@ -257,8 +271,10 @@
 			files = (
 				1F6577C424460A3300035B2C /* ChatVC.swift in Sources */,
 				1FF16C2A2445D390006548CA /* AppDelegate.swift in Sources */,
+				1F75C72224462658009B830F /* LoginVC.swift in Sources */,
 				1F6577C824460FE800035B2C /* GradientView.swift in Sources */,
 				1FF16C2C2445D390006548CA /* SceneDelegate.swift in Sources */,
+				1F75C72024462060009B830F /* Constants.swift in Sources */,
 				1FFA80912445DB5600DA221B /* SWRevealViewController.m in Sources */,
 				1F6577C624460A5100035B2C /* ChannelVC.swift in Sources */,
 			);
