@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 typealias CompletionHandler = (_ Success:Bool) -> ()
 
