@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F3951092448875B00C65DDE /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3951082448875B00C65DDE /* AuthService.swift */; };
 		1F6577C424460A3300035B2C /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6577C324460A3300035B2C /* ChatVC.swift */; };
 		1F6577C624460A5100035B2C /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6577C524460A5100035B2C /* ChannelVC.swift */; };
 		1F6577C824460FE800035B2C /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6577C724460FE800035B2C /* GradientView.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F3951082448875B00C65DDE /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		1F6577C324460A3300035B2C /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		1F6577C524460A5100035B2C /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
 		1F6577C724460FE800035B2C /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -56,6 +58,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F3951072448874400C65DDE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1F3951082448875B00C65DDE /* AuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		1F75C71E2446203D009B830F /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +95,7 @@
 		1FF16C282445D390006548CA /* Smack */ = {
 			isa = PBXGroup;
 			children = (
+				1F3951072448874400C65DDE /* Services */,
 				1F75C71E2446203D009B830F /* Utilities */,
 				1FFA808D2445DB4A00DA221B /* Helpers */,
 				1FFA808C2445DB4500DA221B /* Model */,
@@ -279,6 +290,7 @@
 				1FF16C2C2445D390006548CA /* SceneDelegate.swift in Sources */,
 				1F75C72424462885009B830F /* CreateAccountVC.swift in Sources */,
 				1F75C72024462060009B830F /* Constants.swift in Sources */,
+				1F3951092448875B00C65DDE /* AuthService.swift in Sources */,
 				1FFA80912445DB5600DA221B /* SWRevealViewController.m in Sources */,
 				1F6577C624460A5100035B2C /* ChannelVC.swift in Sources */,
 			);

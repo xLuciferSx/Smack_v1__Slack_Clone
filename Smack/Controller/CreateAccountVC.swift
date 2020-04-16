@@ -15,9 +15,7 @@ class CreateAccountVC: UIViewController {
 
         
     }
-    
-
-
+ 
     @IBAction func closedPressed(_ sender: Any) {
         
         performSegue(withIdentifier: UNWIND, sender: nil)
