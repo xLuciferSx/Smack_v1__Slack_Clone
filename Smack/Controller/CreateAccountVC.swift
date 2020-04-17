@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 class CreateAccountVC: UIViewController {
-    
+ 
     
    //Outlets
     @IBOutlet weak var userNameText: UITextField!
@@ -60,7 +60,7 @@ class CreateAccountVC: UIViewController {
     
     @IBAction func picAvatarPressed(_ sender: Any) {
         
-        
+        performSegue(withIdentifier: TO_AVATAR_PICKER, sender: nil)
     }
     
     @IBAction func pickBackgroundColorPressed(_ sender: Any) {
