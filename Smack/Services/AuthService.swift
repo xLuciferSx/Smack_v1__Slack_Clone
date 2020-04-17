@@ -80,8 +80,7 @@ class AuthService {
                         self.authToken = token
 
                     }
-                }
-
+                }       
                 self.isLoggedIn = true
             } else {
                 completion(false)
@@ -93,4 +92,6 @@ class AuthService {
 
 
     }
+    
+    
 }
