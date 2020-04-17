@@ -31,7 +31,7 @@ let LOGGED_IN_KEY = "loggedIn"
 let USER_EMAIL = "userEmail"
 
 
-let HEADER: HTTPHeaders? = HTTPHeaders(["Content-Type": "application/json, charset=utf-8"])
+let HEADER: HTTPHeaders? = HTTPHeaders(["Content-Type": "application/json"])
 
 
 
