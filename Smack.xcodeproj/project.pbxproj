@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F20A6C1244DFE170076074B /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F20A6C0244DFE170076074B /* MessageService.swift */; };
+		1F20A6C3244DFE470076074B /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F20A6C2244DFE470076074B /* Channel.swift */; };
 		1F3951092448875B00C65DDE /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3951082448875B00C65DDE /* AuthService.swift */; };
 		1F6577C424460A3300035B2C /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6577C324460A3300035B2C /* ChatVC.swift */; };
 		1F6577C624460A5100035B2C /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6577C524460A5100035B2C /* ChannelVC.swift */; };
@@ -31,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F20A6C0244DFE170076074B /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
+		1F20A6C2244DFE470076074B /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		1F3951082448875B00C65DDE /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		1F6577C324460A3300035B2C /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		1F6577C524460A5100035B2C /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
@@ -77,6 +81,7 @@
 			children = (
 				1F3951082448875B00C65DDE /* AuthService.swift */,
 				1FC08E912449BF7400C21CCB /* UserDataService.swift */,
+				1F20A6C0244DFE170076074B /* MessageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -162,6 +167,7 @@
 		1FFA808C2445DB4500DA221B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1F20A6C2244DFE470076074B /* Channel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -319,6 +325,8 @@
 				1F75C72224462658009B830F /* LoginVC.swift in Sources */,
 				1FC9FAE0244DBE0000458FD6 /* ProfileVC.swift in Sources */,
 				1F6577C824460FE800035B2C /* GradientView.swift in Sources */,
+				1F20A6C1244DFE170076074B /* MessageService.swift in Sources */,
+				1F20A6C3244DFE470076074B /* Channel.swift in Sources */,
 				1FF16C2C2445D390006548CA /* SceneDelegate.swift in Sources */,
 				1F75C72424462885009B830F /* CreateAccountVC.swift in Sources */,
 				1FC08E922449BF7400C21CCB /* UserDataService.swift in Sources */,
