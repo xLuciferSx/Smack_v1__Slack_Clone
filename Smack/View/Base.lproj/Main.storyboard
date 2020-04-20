@@ -433,6 +433,7 @@
                     <connections>
                         <outlet property="loginBtn" destination="ljd-0O-ssn" id="Ogm-XV-VLw"/>
                         <outlet property="tableView" destination="KPz-da-pPf" id="SMe-CY-2fZ"/>
+                        <outlet property="userImage" destination="mRY-64-ERI" id="llq-dw-UQV"/>
                         <segue destination="Q4M-AG-fgy" kind="show" identifier="toLogin" id="85M-6s-Ir7"/>
                     </connections>
                 </viewController>
