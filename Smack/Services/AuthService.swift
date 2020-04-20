@@ -83,7 +83,6 @@ class AuthService {
                 let json = try!JSON(data: data)
                 self.userEmail = json["user"].stringValue
                 self.authToken = json["token"].stringValue
-                
                 self.isLoggedIn = true
                 completion(true)
             } else {
@@ -106,18 +105,11 @@ class AuthService {
         
       
         
-        AF.request(URL_USER_ADD, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADERR).responseJSON { (response) in
+        AF.request(URL_USER_ADD, method: .post, parameters: body, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
             
             if response.error == nil {
                 guard let data = response.data else { return }
-                let json = try!JSON(data: data)
-                let id = json["_id"].stringValue
-                let color = json["avatarColor"].stringValue
-                let avatarName = json["avatarName"].stringValue
-                let email = json["email"].stringValue
-                let name = json["name"].stringValue
-                
-                UserDataService.instance.setUserData(id: id, color: color, avatarName: avatarName, email: email, name: name)
+                self.setUserInfo(data: data)
                 completion(true)
                 
             } else {
@@ -127,14 +119,29 @@ class AuthService {
         }
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    func findUserByEmail(completion: @escaping CompletionHandler) {
+        
+        AF.request("\(URL_USER_BY_EMAIL)\(userEmail)", method: .get, parameters: nil ,encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
+            
+            if response.error == nil {
+                      guard let data = response.data else { return }
+                self.setUserInfo(data: data)
+                      completion(true)
+            
+        }
+    }
     
 }
+    
+    func setUserInfo(data: Data) {
+        let json = try!JSON(data: data)
+                             let id = json["_id"].stringValue
+                             let color = json["avatarColor"].stringValue
+                             let avatarName = json["avatarName"].stringValue
+                             let email = json["email"].stringValue
+                             let name = json["name"].stringValue
+                             
+                             UserDataService.instance.setUserData(id: id, color: color, avatarName: avatarName, email: email, name: name)
+    }
+}
+
