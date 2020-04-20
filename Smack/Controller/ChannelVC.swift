@@ -22,17 +22,27 @@ class ChannelVC: UIViewController {
        tableView.layer.backgroundColor = UIColor.clear.cgColor
        tableView.backgroundColor = .clear
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        setupUserInfo()
+    }
+    
    @objc func userDataDidChange( _notif: Notification) {
-    if AuthService.instance.isLoggedIn {
-        loginBtn.setTitle(UserDataService.instance.name, for: .normal)
-        userImage.image = UIImage(named: UserDataService.instance.avatarName)
-        userImage.backgroundColor = UserDataService.instance.returnUIColor(components: UserDataService.instance.avatarColor)
+    setupUserInfo()
     }
-    else {
-        loginBtn.setTitle("Login", for: .normal)
-        userImage.image = UIImage(named: "menuProfileIcon")
-        userImage.backgroundColor = UIColor.clear
-    }
+    
+    func setupUserInfo(){
+        if AuthService.instance.isLoggedIn {
+            loginBtn.setTitle(UserDataService.instance.name, for: .normal)
+            userImage.image = UIImage(named: UserDataService.instance.avatarName)
+            userImage.backgroundColor = UserDataService.instance.returnUIColor(components: UserDataService.instance.avatarColor)
+        }
+        else {
+            loginBtn.setTitle("Login", for: .normal)
+            userImage.image = UIImage(named: "menuProfileIcon")
+            userImage.backgroundColor = UIColor.clear
+        }
+        
     }
     
     @IBAction func loginBtnPressed(_ sender: Any) {
