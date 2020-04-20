@@ -381,7 +381,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="zef-aw-hK6">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="channelCell" id="zef-aw-hK6" customClass="ChannelCell" customModule="Smack" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zef-aw-hK6" id="lQY-jZ-tiY">
@@ -403,6 +403,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="channelName" destination="bIl-BQ-5UC" id="ssL-q8-fhi"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -432,7 +435,7 @@
                     </view>
                     <connections>
                         <outlet property="loginBtn" destination="ljd-0O-ssn" id="Ogm-XV-VLw"/>
-                        <outlet property="tableView" destination="KPz-da-pPf" id="SMe-CY-2fZ"/>
+                        <outlet property="tableView" destination="KPz-da-pPf" id="vXp-YU-tel"/>
                         <outlet property="userImage" destination="mRY-64-ERI" id="llq-dw-UQV"/>
                         <segue destination="Q4M-AG-fgy" kind="show" identifier="toLogin" id="85M-6s-Ir7"/>
                     </connections>
