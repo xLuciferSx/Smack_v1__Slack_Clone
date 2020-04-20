@@ -18,6 +18,7 @@ let BASE_URL = "https://slackclo.herokuapp.com/v1/"
 let URL_REGISTER = "\(BASE_URL)account/register"
 let URL_LOGIN = "\(BASE_URL)account/login"
 let URL_USER_ADD = "\(BASE_URL)user/add"
+let URL_USER_BY_EMAIL = "\(BASE_URL)user/byEmail/"
 
 
 //Colors
@@ -43,7 +44,7 @@ let USER_EMAIL = "userEmail"
 
 
 let HEADER: HTTPHeaders? = HTTPHeaders(["Content-Type": "application/json"])
-let HEADERR: HTTPHeaders? = HTTPHeaders(["Authorization" : "Bearer \(AuthService.instance.authToken)" , "Content-Type": "application/json"])
+let BEARER_HEADER: HTTPHeaders? = HTTPHeaders(["Authorization" : "Bearer \(AuthService.instance.authToken)" , "Content-Type": "application/json"])
 
 
 
