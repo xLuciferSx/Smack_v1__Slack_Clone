@@ -17,6 +17,7 @@
 		1F75C72224462658009B830F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F75C72124462658009B830F /* LoginVC.swift */; };
 		1F75C72424462885009B830F /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F75C72324462885009B830F /* CreateAccountVC.swift */; };
 		1FC08E922449BF7400C21CCB /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC08E912449BF7400C21CCB /* UserDataService.swift */; };
+		1FC9FADD244DACF100458FD6 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC9FADC244DACF100458FD6 /* CircleImage.swift */; };
 		1FF16C2A2445D390006548CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF16C292445D390006548CA /* AppDelegate.swift */; };
 		1FF16C2C2445D390006548CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF16C2B2445D390006548CA /* SceneDelegate.swift */; };
 		1FF16C312445D390006548CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF16C2F2445D390006548CA /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 		1F75C72124462658009B830F /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		1F75C72324462885009B830F /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		1FC08E912449BF7400C21CCB /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
+		1FC9FADC244DACF100458FD6 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		1FF16C262445D390006548CA /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FF16C292445D390006548CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FF16C2B2445D390006548CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				1F6577C724460FE800035B2C /* GradientView.swift */,
 				1FFE6B8424489C270050271F /* RoundedButton.swift */,
 				1F737D002449F81A006B8C7D /* AvatarCell.swift */,
+				1FC9FADC244DACF100458FD6 /* CircleImage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				1FFA80912445DB5600DA221B /* SWRevealViewController.m in Sources */,
 				1F6577C624460A5100035B2C /* ChannelVC.swift in Sources */,
 				1F737CFF2449F63A006B8C7D /* AvatarPickerVC.swift in Sources */,
+				1FC9FADD244DACF100458FD6 /* CircleImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
