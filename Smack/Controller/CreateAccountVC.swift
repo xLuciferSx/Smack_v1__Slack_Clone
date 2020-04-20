@@ -29,6 +29,13 @@ class CreateAccountVC: UIViewController {
         hideKeyboardWhenTappedAround()
         
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if UserDataService.instance.avatarName != "" {
+            userImage.image = UIImage(named: UserDataService.instance.avatarName)
+            avatarName = UserDataService.instance.avatarName
+        }
+    }
  
     @IBAction func closedPressed(_ sender: Any) {
         
