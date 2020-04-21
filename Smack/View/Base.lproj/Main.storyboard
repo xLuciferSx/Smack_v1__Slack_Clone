@@ -357,6 +357,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vXT-Lo-Qk5">
                                 <rect key="frame" x="317" y="103" width="22" height="22"/>
                                 <state key="normal" image="addChannelButton"/>
+                                <connections>
+                                    <action selector="addChannelPressed:" destination="dmy-QZ-jWl" eventType="touchUpInside" id="ujF-7A-2TC"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="oMr-gj-Qr2">
                                 <rect key="frame" x="20" y="773" width="170" height="99"/>
