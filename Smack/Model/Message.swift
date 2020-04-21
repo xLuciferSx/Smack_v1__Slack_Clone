@@ -3,7 +3,7 @@
 //  Smack
 //
 //  Created by Raivis on 21/04/2020.
-//  Copyright © 2020 Jonny B. All rights reserved.
+//  Copyright © 2020 Raivis Olehno. All rights reserved.
 //
 
 import Foundation
