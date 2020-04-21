@@ -2,7 +2,7 @@
 //  CircleImage.swift
 //  Smack
 //
-//  Created by Raivis on 20/04/2020.
+//  Created by Raivis on 16/04/20.
 //  Copyright © 2020 Raivis Olehno. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import UIKit
 
 @IBDesignable
 class CircleImage: UIImageView {
-
+    
     override func awakeFromNib() {
         setupView()
     }

@@ -2,7 +2,7 @@
 //  MessageService.swift
 //  Smack
 //
-//  Created by Raivis on 20/04/2020.
+//  Created by Raivis on 16/04/20.
 //  Copyright © 2020 Raivis Olehno. All rights reserved.
 //
 
@@ -29,6 +29,7 @@ class MessageService {
                         let channel = Channel(channelTitle: name, channelDescription: channelDescription, id: id)
                         self.channels.append(channel)
                     }
+                    print(self.channels[0].channelTitle)
                     completion(true)
                 }
                 
@@ -43,4 +44,3 @@ class MessageService {
     }
     
 }
-

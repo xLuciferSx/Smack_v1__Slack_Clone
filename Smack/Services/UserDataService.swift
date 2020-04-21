@@ -2,7 +2,7 @@
 //  UserDataService.swift
 //  Smack
 //
-//  Created by Raivis on 17/04/2020.
+//  Created by Raivis on 16/04/20.
 //  Copyright © 2020 Raivis Olehno. All rights reserved.
 //
 
@@ -18,27 +18,25 @@ class UserDataService {
     public private(set) var email = ""
     public private(set) var name = ""
     
-    func setUserData(id: String, color: String, avatarName: String, email: String, name: String){
+    func setUserData(id: String, color: String, avatarName: String, email: String, name: String) {
         self.id = id
         self.avatarColor = color
         self.avatarName = avatarName
         self.email = email
         self.name = name
-        
-        
     }
-    func setAvatarName(avatarName: String){
-        
+    
+    func setAvatarName(avatarName: String) {
         self.avatarName = avatarName
     }
-  
-    func returnUIColor(components:String) -> UIColor {
+    
+    func returnUIColor(components: String) -> UIColor {
         let scanner = Scanner(string: components)
-        let comma = CharacterSet(charactersIn: ",")
         let skipped = CharacterSet(charactersIn: "[], ")
+        let comma = CharacterSet(charactersIn: ",")
         scanner.charactersToBeSkipped = skipped
         
-        var r, g ,b , a : NSString?
+        var r, g, b, a : NSString?
         
         scanner.scanUpToCharacters(from: comma, into: &r)
         scanner.scanUpToCharacters(from: comma, into: &g)
@@ -72,4 +70,17 @@ class UserDataService {
         AuthService.instance.userEmail = ""
         AuthService.instance.authToken = ""
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }

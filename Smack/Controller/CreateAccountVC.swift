@@ -2,61 +2,48 @@
 //  CreateAccountVC.swift
 //  Smack
 //
-//  Created by Raivis on 14/04/2020.
+//  Created by Raivis on 16/04/20.
 //  Copyright © 2020 Raivis Olehno. All rights reserved.
 //
 
 import UIKit
-import Alamofire
-import SwiftyJSON
 
 class CreateAccountVC: UIViewController {
- 
     
-   //Outlets
-    @IBOutlet weak var userNameText: UITextField!
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var userImage: UIImageView!
+    // Outlets
+    @IBOutlet weak var usernameTxt: UITextField!
+    @IBOutlet weak var emailTxt: UITextField!
+    @IBOutlet weak var passTxt: UITextField!
+    @IBOutlet weak var userImg: UIImageView!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
-    
-    
-    //Variables
-    
+    // Variables
     var avatarName = "profileDefault"
-    var avatarColor = "[0.5 ,0.5 ,0.5, 1]"
+    var avatarColor = "[0.5, 0.5, 0.5, 1]"
     var bgColor : UIColor?
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        hideKeyboardWhenTappedAround()
         setupView()
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         if UserDataService.instance.avatarName != "" {
-            userImage.image = UIImage(named: UserDataService.instance.avatarName)
+            userImg.image = UIImage(named: UserDataService.instance.avatarName)
             avatarName = UserDataService.instance.avatarName
             if avatarName.contains("light") && bgColor == nil {
-                userImage.backgroundColor = UIColor.lightGray
+                userImg.backgroundColor = UIColor.lightGray
             }
         }
     }
- 
-    @IBAction func closedPressed(_ sender: Any) {
-        
-        performSegue(withIdentifier: UNWIND, sender: nil)
-    }
     
-    @IBAction func createAccountPressed(_ sender: Any) {
+    @IBAction func createAccntPressed(_ sender: Any) {
         spinner.isHidden = false
         spinner.startAnimating()
-        guard let name = userNameText.text , userNameText.text != "" else { return }
-        guard let email = emailTextField.text , emailTextField.text != "" else { return }
-        guard let pass = passwordTextField.text , passwordTextField.text != "" else { return }
+        
+        guard let name = usernameTxt.text , usernameTxt.text != "" else { return }
+        guard let email = emailTxt.text , emailTxt.text != "" else { return }
+        guard let pass = passTxt.text , passTxt.text != "" else { return }
         
         AuthService.instance.registerUser(email: email, password: pass) { (success) in
             if success {
@@ -74,44 +61,41 @@ class CreateAccountVC: UIViewController {
                 })
             }
         }
-
     }
     
-    
-    @IBAction func picAvatarPressed(_ sender: Any) {
-        
+    @IBAction func pickAvatarPressed(_ sender: Any) {
         performSegue(withIdentifier: TO_AVATAR_PICKER, sender: nil)
     }
     
-    @IBAction func pickBackgroundColorPressed(_ sender: Any) {
-        
+    @IBAction func pickBGColorPressed(_ sender: Any) {
         let r = CGFloat(arc4random_uniform(255)) / 255
         let g = CGFloat(arc4random_uniform(255)) / 255
         let b = CGFloat(arc4random_uniform(255)) / 255
         
         bgColor = UIColor(red: r, green: g, blue: b, alpha: 1)
-        avatarColor = "[\(r), \(g), \(g), 1]"
+        avatarColor = "[\(r), \(g), \(b), 1]"
         UIView.animate(withDuration: 0.2) {
-            self.userImage.backgroundColor = self.bgColor
+            self.userImg.backgroundColor = self.bgColor
         }
     }
-  
+    
+    @IBAction func closePressed(_ sender: Any) {
+        performSegue(withIdentifier: UNWIND, sender: nil)
+    }
+    
     func setupView() {
         spinner.isHidden = true
-        userNameText.attributedPlaceholder = NSAttributedString(string: "username", attributes: [NSAttributedString.Key.foregroundColor : smackPurplePlaceHolder])
-        emailTextField.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSAttributedString.Key.foregroundColor : smackPurplePlaceHolder])
-        passwordTextField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedString.Key.foregroundColor : smackPurplePlaceHolder])
-    }
-}
- 
-extension  UIViewController {
-    func hideKeyboardWhenTappedAround() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
-        tap.cancelsTouchesInView = false
+        usernameTxt.attributedPlaceholder = NSAttributedString(string: "username", attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlaceHolder])
+        emailTxt.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlaceHolder])
+        passTxt.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlaceHolder])
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(CreateAccountVC.handleTap))
         view.addGestureRecognizer(tap)
     }
-
-    @objc func dismissKeyboard() {
+    
+    @objc func handleTap() {
         view.endEditing(true)
     }
+    
+
 }

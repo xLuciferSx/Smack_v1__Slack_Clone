@@ -2,7 +2,7 @@
 //  Constants.swift
 //  Smack
 //
-//  Created by Raivis on 14/04/2020.
+//  Created by Raivis on 16/04/20.
 //  Copyright © 2020 Raivis Olehno. All rights reserved.
 //
 

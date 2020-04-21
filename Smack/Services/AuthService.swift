@@ -2,13 +2,9 @@
 //  AuthService.swift
 //  Smack
 //
-//  Created by Raivis on 16/04/2020.
+//  Created by Raivis on 16/04/20.
 //  Copyright © 2020 Raivis Olehno. All rights reserved.
 //
-
-import Foundation
-import Alamofire
-import SwiftyJSON
 
 import Foundation
 import Alamofire

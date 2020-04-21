@@ -2,8 +2,8 @@
 //  Channel.swift
 //  Smack
 //
-//  Created by Raivis on 20/04/2020.
-//  Copyright © 2020 Raivis Olehno. All rights reserved.
+//  Created by Raivis Olehno on 4/17/20.
+//  Copyright © 2020 Jonny B. All rights reserved.
 //
 
 import Foundation

@@ -2,7 +2,7 @@
 //  AvatarCell.swift
 //  Smack
 //
-//  Created by Raivis on 17/04/2020.
+//  Created by Raivis on 16/04/20.
 //  Copyright © 2020 Raivis Olehno. All rights reserved.
 //
 
@@ -15,28 +15,24 @@ enum AvatarType {
 
 class AvatarCell: UICollectionViewCell {
     
-    @IBOutlet weak var avatarImage: UIImageView!
-    
-    
+    @IBOutlet weak var avatarImg: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        setupView() 
-        
+        setUpView()
     }
     
     func configureCell(index: Int, type: AvatarType) {
         if type == AvatarType.dark {
-            avatarImage.image = UIImage(named: "dark\(index)")
+            avatarImg.image = UIImage(named: "dark\(index)")
             self.layer.backgroundColor = UIColor.lightGray.cgColor
         } else {
-                       avatarImage.image = UIImage(named: "light\(index)")
-                       self.layer.backgroundColor = UIColor.gray.cgColor
+            avatarImg.image = UIImage(named: "light\(index)")
+            self.layer.backgroundColor = UIColor.gray.cgColor
         }
     }
     
-    func setupView() {
-        
+    func setUpView() {
         self.layer.backgroundColor = UIColor.lightGray.cgColor
         self.layer.cornerRadius = 10
         self.clipsToBounds = true

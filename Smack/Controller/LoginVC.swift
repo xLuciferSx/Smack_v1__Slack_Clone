@@ -2,68 +2,56 @@
 //  LoginVC.swift
 //  Smack
 //
-//  Created by Raivis on 14/04/2020.
+//  Created by Raivis on 16/04/20.
 //  Copyright © 2020 Raivis Olehno. All rights reserved.
 //
 
 import UIKit
-import Alamofire
-import SwiftyJSON
 
 class LoginVC: UIViewController {
     
-    //Outlets
-    @IBOutlet weak var usernameText: UITextField!
-    @IBOutlet weak var passwordText: UITextField!
+    // Outlets
+    @IBOutlet weak var usernameTxt: UITextField!
+    @IBOutlet weak var passwordTxt: UITextField!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupView()
-  let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
-  view.addGestureRecognizer(tap)
-    }
-    
-    @objc override func dismissKeyboard() {
-      view.endEditing(true)
-    }
-
-    @IBAction func closePressed(_ sender: Any) {
-        
-        dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction func createAccntBtnPressed(_ sender: Any) {
-        
-        performSegue(withIdentifier: TO_CREATE_ACCOUNT, sender: nil)
+        setUpView()
     }
     
     @IBAction func loginPressed(_ sender: Any) {
         spinner.isHidden = false
         spinner.startAnimating()
         
-        guard let email = usernameText.text , usernameText.text != nil else {return}
-        guard let password = passwordText.text , passwordText.text != nil else {return}
+        guard let email = usernameTxt.text , usernameTxt.text != "" else { return }
+        guard let pass = passwordTxt.text , passwordTxt.text != "" else { return }
         
-        AuthService.instance.loginUser(email: email, password: password) { (success) in
+        AuthService.instance.loginUser(email: email, password: pass) { (success) in
             if success {
-                AuthService.instance.findUserByEmail { (success) in
+                AuthService.instance.findUserByEmail(completion: { (success) in
                     if success {
                         NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
                         self.spinner.isHidden = true
                         self.spinner.stopAnimating()
                         self.dismiss(animated: true, completion: nil)
                     }
-                }
+                })
             }
         }
     }
-    func setupView(){
-        spinner.isHidden = true
-        usernameText.attributedPlaceholder = NSAttributedString(string: "username", attributes: [NSAttributedString.Key.foregroundColor : smackPurplePlaceHolder])
-        passwordText.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedString.Key.foregroundColor : smackPurplePlaceHolder])
-          hideKeyboardWhenTappedAround()
+    
+    @IBAction func closePressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func createAccntBtnPressed(_ sender: Any) {
+        performSegue(withIdentifier: TO_CREATE_ACCOUNT, sender: nil)
+    }
+    
+    func setUpView() {
+        spinner.isHidden = true
+        usernameTxt.attributedPlaceholder = NSAttributedString(string: "username", attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlaceHolder])
+        passwordTxt.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlaceHolder])
+    }
 }
-
