@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1FB4D658244F4836005AE46A /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB4D657244F4836005AE46A /* Message.swift */; };
+		1FBE1EDE244F55B7002386C7 /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBE1EDD244F55B7002386C7 /* KeyboardBoundView.swift */; };
 		2F34E62708C8523E3B148AB2 /* Pods_Smack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3533BA0C4C1F17B8A7E6890A /* Pods_Smack.framework */; };
 		F9112D691F1D507100F41787 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9112D681F1D507100F41787 /* RoundedButton.swift */; };
 		F9112D6D1F1D6C9700F41787 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9112D6C1F1D6C9700F41787 /* UserDataService.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		1FB4D657244F4836005AE46A /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		1FBE1EDD244F55B7002386C7 /* KeyboardBoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardBoundView.swift; sourceTree = "<group>"; };
 		3533BA0C4C1F17B8A7E6890A /* Pods_Smack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		744F8A72AFC8AF2A24103AF0 /* Pods-Smack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack.release.xcconfig"; path = "Pods/Target Support Files/Pods-Smack/Pods-Smack.release.xcconfig"; sourceTree = "<group>"; };
 		BA85681A27A560F56CCC0CB4 /* Pods-Smack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smack/Pods-Smack.debug.xcconfig"; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				F98EC6D81F1DE16000C49B00 /* AvatarCell.swift */,
 				F93E8DAE1F1E98830053D445 /* CircleImage.swift */,
 				F93D292E1F1F16C800B6CDF8 /* ChannelCell.swift */,
+				1FBE1EDD244F55B7002386C7 /* KeyboardBoundView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FBE1EDE244F55B7002386C7 /* KeyboardBoundView.swift in Sources */,
 				F9D018581F208E6900AC46B1 /* SocketService.swift in Sources */,
 				F93E8DB71F1EC19E0053D445 /* ProfileVC.swift in Sources */,
 				F93D292F1F1F16C800B6CDF8 /* ChannelCell.swift in Sources */,
