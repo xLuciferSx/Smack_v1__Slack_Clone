@@ -29,9 +29,9 @@ class AuthService {
         }
     }
     
-    var authToken: String {
+    var authToken: String? {
         get {
-            return defaults.value(forKey: TOKEN_KEY) as! String
+            return defaults.value(forKey: TOKEN_KEY) as? String
         }
         set {
             defaults.set(newValue, forKey: TOKEN_KEY)
@@ -140,7 +140,7 @@ class AuthService {
                              let avatarName = json["avatarName"].stringValue
                              let email = json["email"].stringValue
                              let name = json["name"].stringValue
-                             
+
                              UserDataService.instance.setUserData(id: id, color: color, avatarName: avatarName, email: email, name: name)
     }
 }
