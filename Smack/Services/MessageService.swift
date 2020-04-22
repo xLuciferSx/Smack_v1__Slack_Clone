@@ -45,7 +45,7 @@ class MessageService {
     
     func  findAllmessagesForChannel(channelId: String, completion: @escaping CompletionHandler){
         
-        AF.request("\(URL_GET_MESSAGES)\(channelId)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: AUTHORIZATION_HEADER).responseJSON { (response) in
+        AF.request("\(URL_GET_MESSAGES)\(channelId)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
             if response.error == nil {
                 self.clearMessages()
                 guard let data = response.data else {return}

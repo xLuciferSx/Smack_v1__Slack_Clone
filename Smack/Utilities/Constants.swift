@@ -50,7 +50,3 @@ let USER_EMAIL = "userEmail"
 
 let HEADER: HTTPHeaders? = HTTPHeaders(["Content-Type": "application/json"])
 let BEARER_HEADER: HTTPHeaders? = HTTPHeaders(["Authorization" : "Bearer \(AuthService.instance.authToken!)" , "Content-Type": "application/json"])
-let AUTHORIZATION_HEADER: HTTPHeaders? = HTTPHeaders(["Authorization" : "Bearer \(AuthService.instance.authToken!)"])
-
-
-
