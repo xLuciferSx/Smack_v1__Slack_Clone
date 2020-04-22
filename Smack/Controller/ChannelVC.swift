@@ -80,6 +80,7 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             userImg.image = UIImage(named: "menuProfileIcon")
             userImg.backgroundColor = UIColor.clear
             tableView.reloadData()
+            
         }
     }
     
